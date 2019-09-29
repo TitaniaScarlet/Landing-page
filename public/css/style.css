@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+ /* body {
+    background: url(storage\app\public\background.jpg);
+  } */
+
+  html, body {
+    background: url(фон-роллы-1.jpg);
+    background-size: 500px 510px, auto, 150px;
+  }
+/*
