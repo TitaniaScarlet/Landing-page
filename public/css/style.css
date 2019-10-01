@@ -8,4 +8,17 @@
     background: url(фон-роллы-1.jpg);
     background-size: 500px 510px, auto, 150px;
   }
+
+  a.mine {
+    color: #000;
+    font-size: 16px;
+text-decoration: none;
+font-weight: bold;
+}
+
+a.mine:hover, a.mine:active {
+  color: #821f1f;
+  font-size: 16px;
+  text-decoration: none;
+}
 /*

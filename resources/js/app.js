@@ -7,10 +7,9 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import VeeValidate from 'vee-validate';
-import ru from 'vee-validate/dist/locale/ru';
-
-/**
+// import ru from 'vee-validate/dist/locale/ru';
+// Validator.localize('ru', ru);
+import { ValidationProvider } from 'vee-validate';/**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
  * components and automatically register them with their "basename".
@@ -23,7 +22,7 @@ import ru from 'vee-validate/dist/locale/ru';
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('basket-component', require('./components/BasketComponent.vue').default);
-
+Vue.component('ValidationProvider', ValidationProvider);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

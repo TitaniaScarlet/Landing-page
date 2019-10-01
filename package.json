@@ -24,7 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "vee-validate": "^3.0.8",
-        "vue-inputmask": "^0.2.1"
+        "inputmask": "^4.0.9",
+        "vee-validate": "^3.0.8"
     }
 }

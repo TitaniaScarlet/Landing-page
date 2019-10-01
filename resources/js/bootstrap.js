@@ -1,7 +1,4 @@
 window._ = require('lodash');
-window._ = require('vue-inputmask');
-window._ = require('vee-validate');
-
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support

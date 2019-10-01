@@ -59,27 +59,29 @@ foreach ($slugs as $slug) {
     }
 
     public function order(Request $request) {
-      $orders = $request->orders;
-      array_push( $orders, array($request->name, $request->code, $request->tel));
+      if($request->has('name') && $request->has('tel')) {
+        $orders = $request->orders;
+        array_push( $orders, array($request->name, $request->tel));
 
-      define('TELEGRAM_TOKEN', '971962607:AAEsp7uiOAsLqXNtKnKIB779C0AhEU5F2TA');
-      define('TELEGRAM_CHATID', '603349067');
-      $ch = curl_init();
-       curl_setopt_array(
-           $ch,
-           array(
-               CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
-               CURLOPT_POST => TRUE,
-               CURLOPT_RETURNTRANSFER => TRUE,
-               CURLOPT_TIMEOUT => 10,
-               CURLOPT_POSTFIELDS => array(
-                   'chat_id' => TELEGRAM_CHATID,
-                   'text' => json_encode($orders,  JSON_UNESCAPED_UNICODE)
-               ),
-           )
-       );
-       curl_exec($ch);
-$request->session()->forget('slug');
+        define('TELEGRAM_TOKEN', '971962607:AAEsp7uiOAsLqXNtKnKIB779C0AhEU5F2TA');
+        define('TELEGRAM_CHATID', '603349067');
+        $ch = curl_init();
+         curl_setopt_array(
+             $ch,
+             array(
+                 CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
+                 CURLOPT_POST => TRUE,
+                 CURLOPT_RETURNTRANSFER => TRUE,
+                 CURLOPT_TIMEOUT => 10,
+                 CURLOPT_POSTFIELDS => array(
+                     'chat_id' => TELEGRAM_CHATID,
+                     'text' => json_encode($orders,  JSON_UNESCAPED_UNICODE)
+                 ),
+             )
+         );
+         curl_exec($ch);
+  $request->session()->forget('slug');
+      }
 
     }
 

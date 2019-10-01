@@ -2,21 +2,35 @@
 
 @section('content')
   <div class="container">
-    <div class="row">
-      <div class="col-sm-10">
-        <ol class="nav ">
-          @foreach ($categories as $category_list)
-            @if ($category_list == $category)
-              <li class="nav-item"><a class="mine nav-link active"  href="{{route('category', $category_list->slug)}}">{{$category->title}}</a></li>
-            @else
-              <li class="nav-item"><a class="mine nav-link" href="{{route('category', $category_list->slug)}}">{{$category_list->title}}</a></li>
-            @endif
-          @endforeach
-        </ol>
-      </div>
-      <div class="col-sm-2">
+    <nav class="navbar navbar-expand-lg navbar-inverse bg-light">
+    {{-- <div class="row">
+      <div class="col-sm-10"> --}}
+
+
+{{-- <div class="navbar-header"> --}}
+<button type="mine nav-link" class="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+  <span>Меню</span>
+</button>
+{{-- </div> --}}
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="navbar-nav mr-auto">
+  @foreach ($categories as $category_list)
+    @if ($category_list == $category)
+      <li class="nav-item active"><a class="mine nav-link"  href="{{route('category', $category_list->slug)}}">{{$category->title}}</a></li>
+    @else
+      <li class="nav-item"><a class="mine nav-link" href="{{route('category', $category_list->slug)}}">{{$category_list->title}}</a></li>
+    @endif
+  @endforeach
+
+</ul>
+</div>
+
+
+      {{-- </div>
+
+      <div class="col-sm-2 float-right"> --}}
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
 <i class="fas fa-shopping-basket"></i></button>
 
 <!-- Modal -->
@@ -35,15 +49,16 @@
     </div>
   </div>
 </div>
-        {{-- <a class="btn btn-secondary" role="button" href="{{route('basket.index')}}"><i class="fas fa-shopping-basket"></i></a> --}}
-      </div>
-      </div>
+      {{-- </div>
+    </div> --}}
+  </nav>
+
       <br>
       <div class="row">
         @foreach ($menus as $menu)
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="card" style="width: 15rem; height: 22rem">
-              <img class="card-img-top" src="{{asset('/storage/' . $menu->image)}}"  alt="Card image cap">
+              <img class="card-img-top"  height="150" src="{{asset('/storage/' . $menu->image)}}"  alt="Card image cap">
               <div class="main card-body">
                 <h5 class="card-title">{{$menu->title}}</h5>
                 <p class="card-text">{{$menu->ingredients}}</p>
