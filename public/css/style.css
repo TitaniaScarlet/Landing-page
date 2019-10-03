@@ -1,24 +1,124 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
- /* body {
-    background: url(storage\app\public\background.jpg);
-  } */
+@import url(href="https://fonts.googleapis.com/css?family=Arimo|Lato&display=swap");@charset "UTF-8";
 
-  html, body {
-    background: url(фон-роллы-1.jpg);
-    background-size: 500px 510px, auto, 150px;
-  }
+body {
+  background-color: #f2f2f2;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
 
-  a.mine {
-    color: #000;
-    font-size: 16px;
-text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: Arimo;
+font-weight: 300;
+color: #333;
+}
+
+p {
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  margin-top: auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+a {
+  color: #b33b3b;
+}
+
+a:hover, a:focus {
+  color: #7b7b7b;
+  text-decoration: none;
+  outline: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.navbar-top {
+  height: 110px;
+  font-weight: 800;
+  font-size: 20px;
+  padding-top: -5px;
+  padding-bottom: -5px;
+  background: #2d2d2d;
+  border-color: #2d2d2d;
+}
+
+.navbar-menu {
+  /* height: 70px; */
+  font-weight: 200;
+  font-size: 18px;
+  background: #f2f2f2;
+  border-color: #f2f2f2;
+
+}
+
+.navbar-top .navbar-nav > .active > a {
+  color: #7b7b7b;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  color: #b33b3b;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #999;
+  font-weight: bolder;
+  font-size: 26px;
+  margin-right: 50px;
+  letter-spacing: 1px;
+}
+a.mine {
+  color: #333;
 font-weight: bold;
 }
 
 a.mine:hover, a.mine:active {
-  color: #821f1f;
-  font-size: 16px;
-  text-decoration: none;
+color: #7b7b7b;
 }
-/*
+
+.button-basket {
+  background-color: #b33b3b;
+  color: #000;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.card-body {
+  background-color: #fafafa;
+}
+
+.modal-body {
+  background-color: #f2f2f2;
+}
+
+.modal-header {
+  background-color: #f2f2f2;
+}
+
+.modal-title {
+  font-weight: bold;
+}

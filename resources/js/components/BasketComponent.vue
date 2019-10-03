@@ -7,9 +7,7 @@
     <div class="row">
       <div class="col-sm-6 col-12">
         <label for="name">Имя</label>
-
     <input id="name" type="text" class="form-control" name = "name" v-model="name">
-
       </div>
       <div class="col-sm-6 col-12">
         <label for="text">Номер телефона</label>
@@ -45,11 +43,13 @@
     </div>
     </div>
 
-    <button v-on:click="add" class="btn btn-block btn-secondary">Заказать</button>
+    <button v-on:click="add" class="btn btn-block btn-secondary button-basket">Заказать</button>
   </div>
 
   </div>
 </template>
+
+
 
 <script>
 // Validator.localize('ru', ru);
